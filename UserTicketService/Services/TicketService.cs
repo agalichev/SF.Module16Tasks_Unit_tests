@@ -15,6 +15,11 @@ namespace UserTicketService.Services
                 throw new TicketNotFoundException() : ticket.Id;
         }
 
+        public Ticket GetTicket(int ticketId)
+        {
+            return new Ticket(1, "", 1);
+        }
+
         private IEnumerable<Ticket> FakeBaseData
         {
             get {

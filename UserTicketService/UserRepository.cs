@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace UserTicketService
 {
-    public class UserRepository :
+    public class UserRepository : IUserRepository
     {
-
+        public 
     }
 }

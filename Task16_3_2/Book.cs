@@ -8,5 +8,6 @@ namespace Task16_3_2
 {
     public class Book
     {
+        public string Title { get; set; }
     }
 }
