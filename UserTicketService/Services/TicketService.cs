@@ -17,7 +17,10 @@ namespace UserTicketService.Services
 
         public Ticket GetTicket(int ticketId)
         {
-            return new Ticket(1, "", 1);
+            //return new Ticket(1, "", 1); // второй этап - минимальный код для завершия теста
+            var ticket = FakeBaseData.FirstOrDefault(t => t.Id == ticketId);
+            return (ticket is null) ?
+                throw new TicketNotFoundException() : ticket;
         }
 
         private IEnumerable<Ticket> FakeBaseData
